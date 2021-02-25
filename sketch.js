@@ -403,22 +403,23 @@ fill("black")
   uplayer.velocityY=0
 // presses
 //coins infinite
-if (frameCount %60 === 0) {
+if (frameCount %70 === 0) {
   e6=createSprite(width/1-width/2,height/2-500);
 e6.addImage("door",coin)
-e6.scale=.15
+e6.scale=.18
 e6.visible=false
-e6.velocityY=13
+e6.velocityY=17
 e6.x=Math.round(random(width/1.3-width/2,width/.9-width/2))
 e6.lifetime=900
 }
 //hit infinite
-if(frameCount %10 === 0){
+// it was 30 frameCount and from 30 is 10 frameCount
+if(frameCount %30 === 0){
 e7=createSprite(width/1-width/2,height/2-500);
 e7.addImage("door",hitImage)
-e7.scale=.3
+e7.scale=.7
 e7.visible=false
-e7.velocityY=17
+e7.velocityY=20
 e7.x=Math.round(random(width/1.3-width/2,width/.9-width/2))
 e7.lifetime=900
 }
